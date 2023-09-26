@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="307.228" tests="20" skipped="0" failures="6" errors="0">
+<testcase classname="F01 Register | users could register with new accounts" name="Guest could register with valid data successfully" time="18.704">
+<system-out><![CDATA[
+Given user go to register page..............................................passed
+When user Selects Gender....................................................passed
+And User enters First name "automation5"....................................passed
+And User enters Last name "tester5".........................................passed
+And User Selects Day Of Birth "10"..........................................passed
+And USer Selects Month of Birth "September".................................passed
+And User Selects Year of Birth "1994".......................................passed
+And User Enters email Address "test@gmail.com"..............................passed
+And User enters Password "123456"...........................................passed
+And User enters confirm password "123456"...................................passed
+And User Clicks on Register Button..........................................passed
+Then User creates his account successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02 | users could Login with his accounts" name="Guest could register with valid data successfully" time="15.256">
+<system-out><![CDATA[
+Given user go to Login page.................................................passed
+When user enters Email Address "test@gmail.com".............................passed
+And User Clicks Password "123456"...........................................passed
+And User Clicks on Login Button.............................................passed
+Then User Log in his account successfully...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02 | users could Login with his accounts" name="Guest user could register with invalid data - Example #1.1" time="14.43">
+<system-out><![CDATA[
+Given user go to Login page.................................................passed
+When User Enters email Address "Amit50@gmail.com"...........................passed
+And User enters Password "123456"...........................................passed
+And User Clicks on Login Button.............................................passed
+Then User Fail to go to his account.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02 | users could Login with his accounts" name="Guest user could register with invalid data - Example #1.2" time="13.502">
+<system-out><![CDATA[
+Given user go to Login page.................................................passed
+When User Enters email Address "Amit90@gmail.com"...........................passed
+And User enters Password "asd123"...........................................passed
+And User Clicks on Login Button.............................................passed
+Then User Fail to go to his account.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03 Currencies | users could choose his currencies" name="Guest could choose his currencies successfully" time="13.467">
+<system-out><![CDATA[
+Given User got to Currencies Categories.....................................passed
+When User Select from Currencies............................................passed
+And User finds four Products with Euro currencies...........................passed
+Then User Checks that all products contains Euro sign.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03 Search | users could search items in home Page" name="Verify that User can search for &quot;book&quot; items - Example #1.1" time="14.902">
+<system-out><![CDATA[
+Given User go to home Page and Click on Search Bar..........................passed
+When In the search Bar, User Search for "book"..............................passed
+And User Clicks on Search Bar...............................................passed
+Then User go to List of "book"..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03 Search | users could search items in home Page" name="Verify that User can search for &quot;book&quot; items - Example #1.2" time="14.619">
+<system-out><![CDATA[
+Given User go to home Page and Click on Search Bar..........................passed
+When In the search Bar, User Search for "laptop"............................passed
+And User Clicks on Search Bar...............................................passed
+Then User go to List of "laptop"............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03 Search | users could search items in home Page" name="Verify that User can search for &quot;book&quot; items - Example #1.3" time="14.642">
+<system-out><![CDATA[
+Given User go to home Page and Click on Search Bar..........................passed
+When In the search Bar, User Search for "nike"..............................passed
+And User Clicks on Search Bar...............................................passed
+Then User go to List of "nike"..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03 Search | users could search items in home Page" name="Verify that Page contains Sku - Example #1.1" time="15.594">
+<system-out><![CDATA[
+Given User go to home Page and Click on Search Bar..........................passed
+When In the search Bar, User Search for "SCI_FAITH".........................passed
+And User Clicks on Search Bar...............................................passed
+And User go to List of "SCI_FAITH"..........................................passed
+And User clicks on each "SCI_FAITH".........................................passed
+Then User verify existence for Sku..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03 Search | users could search items in home Page" name="Verify that Page contains Sku - Example #1.2" time="15.737">
+<system-out><![CDATA[
+Given User go to home Page and Click on Search Bar..........................passed
+When In the search Bar, User Search for "APPLE_CAM".........................passed
+And User Clicks on Search Bar...............................................passed
+And User go to List of "APPLE_CAM"..........................................passed
+And User clicks on each "APPLE_CAM".........................................passed
+Then User verify existence for Sku..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03 Search | users could search items in home Page" name="Verify that Page contains Sku - Example #1.3" time="14.337">
+<system-out><![CDATA[
+Given User go to home Page and Click on Search Bar..........................passed
+When In the search Bar, User Search for "SF_PRO_11".........................passed
+And User Clicks on Search Bar...............................................passed
+And User go to List of "SF_PRO_11"..........................................passed
+And User clicks on each "SF_PRO_11".........................................passed
+Then User verify existence for Sku..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F01 hover | users hover over Menu products" name="Verify that user choose from the Menu" time="20.251">
+<system-out><![CDATA[
+Given User go to home Page and click on menu................................passed
+When User hover over Computer...............................................passed
+And User  choose desktop tab................................................passed
+And User Open desktop page..................................................passed
+Then User Sure over them....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="P06 HomeSlider| user show slider for seeing products" name="first slider is clickable on home page" time="12.794">
+<failure type="java.lang.AssertionError" message="The following asserts failed:
+	true expected [https://demo.nopcommerce.com/iphone-6] but found [[[FirefoxDriver: firefox on windows (8787d318-8522-4235-9ced-f0a1521a55c8)] -&gt; xpath: //a[@class=&quot;nivo-control active&quot; and @rel=&quot;0&quot;]]]">
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	true expected [https://demo.nopcommerce.com/iphone-6] but found [[[FirefoxDriver: firefox on windows (8787d318-8522-4235-9ced-f0a1521a55c8)] -> xpath: //a[@class="nivo-control active" and @rel="0"]]]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at StepsDefinitions.D06_homeSlidersStepDef.userOrderNumberOfNokiaLamia(D06_homeSlidersStepDef.java:28)
+	at ✽.User order number of iPhone(file:///C:/Users/makra/IdeaProjects/Demonopcommerce/src/main/resources/Features/F06__homeSliders.feature:7)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User select first slider..............................................passed
+When User go to on first products page......................................passed
+Then User order number of iPhone............................................failed
+]]></system-out>
+</testcase>
+<testcase classname="P06 HomeSlider| user show slider for seeing products" name="Second slider is clickable on home page" time="16.203">
+<failure type="java.lang.AssertionError" message="The following asserts failed:
+	URL mismatch! Expected https://demo.nopcommerce.com/nokia-lumia-1020 but was [[FirefoxDriver: firefox on windows (c9fc76b5-d8ef-4078-8e01-7f30fd8f896a)] -&gt; xpath: //a[@class=&quot;nivo-control active&quot; and @rel=&quot;1&quot;]] expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [[[FirefoxDriver: firefox on windows (c9fc76b5-d8ef-4078-8e01-7f30fd8f896a)] -&gt; xpath: //a[@class=&quot;nivo-control active&quot; and @rel=&quot;1&quot;]]]">
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	URL mismatch! Expected https://demo.nopcommerce.com/nokia-lumia-1020 but was [[FirefoxDriver: firefox on windows (c9fc76b5-d8ef-4078-8e01-7f30fd8f896a)] -> xpath: //a[@class="nivo-control active" and @rel="1"]] expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [[[FirefoxDriver: firefox on windows (c9fc76b5-d8ef-4078-8e01-7f30fd8f896a)] -> xpath: //a[@class="nivo-control active" and @rel="1"]]]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at StepsDefinitions.D06_homeSlidersStepDef.userOrderNumberOfIPhone(D06_homeSlidersStepDef.java:43)
+	at ✽.User order number of nokia lamia(file:///C:/Users/makra/IdeaProjects/Demonopcommerce/src/main/resources/Features/F06__homeSliders.feature:12)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User select Second slider.............................................passed
+When User go to on second products page.....................................passed
+Then User order number of nokia lamia.......................................failed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="13.714">
+<failure type="org.openqa.selenium.NoSuchWindowException" message="Browsing context has been discarded
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1081a044-9345-4c94-acda-02c0304b5b57, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:2784, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11920, moz:profile: C:\Users\makra\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:2784/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1081a044-9345-4c94-acda-02c0304b5b57">
+<![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1081a044-9345-4c94-acda-02c0304b5b57, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:2784, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11920, moz:profile: C:\Users\makra\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:2784/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1081a044-9345-4c94-acda-02c0304b5b57
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:312)
+	at StepsDefinitions.D07_followUsStepDef.facebookPageIsOpenedInNewTab(D07_followUsStepDef.java:23)
+	at ✽.facebook page is opened in new tab(file:///C:/Users/makra/IdeaProjects/Demonopcommerce/src/main/resources/Features/F07_followUs.feature:6)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user opens facebook link..............................................passed
+When User clicks on exist button............................................passed
+Then facebook page is opened in new tab.....................................failed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens Twitter link" time="14.187">
+<failure type="org.openqa.selenium.NoSuchWindowException" message="Browsing context has been discarded
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4b5f8f47-245d-4903-95ce-71d71baba7ca, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:10984, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8764, moz:profile: C:\Users\makra\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:10984/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4b5f8f47-245d-4903-95ce-71d71baba7ca">
+<![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4b5f8f47-245d-4903-95ce-71d71baba7ca, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:10984, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8764, moz:profile: C:\Users\makra\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:10984/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4b5f8f47-245d-4903-95ce-71d71baba7ca
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:312)
+	at StepsDefinitions.D07_followUsStepDef.userCheckForFollowPage(D07_followUsStepDef.java:37)
+	at ✽.User check for follow Page(file:///C:/Users/makra/IdeaProjects/Demonopcommerce/src/main/resources/Features/F07_followUs.feature:11)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user opens Twitter link...............................................passed
+When Twitter page is opened in new tab......................................passed
+Then User check for follow Page.............................................failed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens rss  link" time="17.414">
+<failure type="java.lang.IndexOutOfBoundsException" message="Index 1 out of bounds for length 1">
+<![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at Pages.P03_HomePage.RealRssPage(P03_HomePage.java:241)
+	at StepsDefinitions.D07_followUsStepDef.rssPageIsOpenedInNewTab(D07_followUsStepDef.java:46)
+	at ✽.rss page is opened in new tab(file:///C:/Users/makra/IdeaProjects/Demonopcommerce/src/main/resources/Features/F07_followUs.feature:15)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user opens rss  link..................................................passed
+When rss page is opened in new tab..........................................failed
+Then User check for follow Page in rss Page.................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="13.494">
+<failure type="org.openqa.selenium.NoSuchWindowException" message="Browsing context has been discarded
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9d775ab5-2bde-4a83-a8c5-362ec175d6d3, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:34137, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18168, moz:profile: C:\Users\makra\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:34137/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9d775ab5-2bde-4a83-a8c5-362ec175d6d3">
+<![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [9d775ab5-2bde-4a83-a8c5-362ec175d6d3, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:34137, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18168, moz:profile: C:\Users\makra\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:34137/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9d775ab5-2bde-4a83-a8c5-362ec175d6d3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:312)
+	at StepsDefinitions.D07_followUsStepDef.userCheckForFollowPageInYoutube(D07_followUsStepDef.java:63)
+	at ✽.User check for follow Page in youtube(file:///C:/Users/makra/IdeaProjects/Demonopcommerce/src/main/resources/Features/F07_followUs.feature:21)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user opens youtube link...............................................passed
+When youtube page is opened in new tab......................................passed
+Then User check for follow Page in youtube..................................failed
+]]></system-out>
+</testcase>
+<testcase classname="F08 | User select Wishlist" name="verify that user can choose his favour product" time="13.327">
+<system-out><![CDATA[
+Given User Search for products..............................................passed
+When user clicks on wishlist................................................passed
+Then User confirm adding product to wishlist................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08 | User select Wishlist" name="verify that user can add his favour product in wishlist" time="20.162">
+<system-out><![CDATA[
+Given User Search for products..............................................passed
+When user clicks on wishlist................................................passed
+And User wait to be sure product to add.....................................passed
+And User go to Wishlist Tab.................................................passed
+Then User make sure about the quantity needed...............................passed
+]]></system-out>
+</testcase>
+</testsuite>

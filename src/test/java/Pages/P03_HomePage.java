@@ -175,22 +175,27 @@ public class P03_HomePage {
         Hooks.driver.findElement(By.id("nivo-slider"));
     }
     public void clickProductPage1(){
-//        WebDriverWait wait = new WebDriverWait(Hooks.driver, Duration.ofSeconds(20).plusMillis(500));// 10 seconds timeout
-        WebElement movingImageSlide = Hooks.driver.findElement(By.cssSelector("#nivo-slider > a:nth-child(1)"));
+
+        WebElement movingImageSlide = Hooks.driver.findElement(By.xpath("//a[@class=\"nivo-control active\" and @rel=\"0\"]"));
         actions.moveToElement(movingImageSlide).perform();
         actions.click();
     }
-    public void GotoLinkProduct(){
-        Hooks.driver.findElement(By.cssSelector("#nivo-slider > a:nth-child(1)")).click();
+    public String GotoLinkProduct(){
+        WebDriverWait wait = new WebDriverWait(Hooks.driver,Duration.ofSeconds(30));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class=\"nivo-control active\" and @rel=\"0\"]")));
+        return String.valueOf(element);
+
     }
     public void clickProductPage2() {
-        // Find the element representing the moving image slide
-        WebElement movingImageSlide = Hooks.driver.findElement(By.xpath("//*[@id=\"nivo-slider\"]/a[2]"));
-        actions.moveToElement(movingImageSlide).perform();
+        WebDriverWait wait = new WebDriverWait(Hooks.driver,Duration.ofSeconds(5));
+          WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class=\"nivo-control active\" and @rel=\"1\"]")));
+        actions.moveToElement(element).perform();
         actions.click();
     }
-    public void GoToUrl(){
-        Hooks.driver.findElement(By.xpath("//*[@id=\"nivo-slider\"]/a[2]"));
+    public String GoToUrl(){
+        WebDriverWait wait = new WebDriverWait(Hooks.driver,Duration.ofSeconds(10));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class=\"nivo-control active\" and @rel=\"1\"]")));
+        return String.valueOf(element);
     }
 
     //Follow us

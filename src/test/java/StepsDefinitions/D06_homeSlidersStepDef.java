@@ -22,8 +22,7 @@ public class D06_homeSlidersStepDef {
     }
     @Then("User order number of iPhone")
     public void userOrderNumberOfNokiaLamia() {
-        home.GotoLinkProduct();
-        String actualhref="//*[@id=\"nivo-slider\"]/a[1]";
+        String actualhref=home.GotoLinkProduct();
         String expectedhref ="https://demo.nopcommerce.com/iphone-6";
         soft.assertEquals(actualhref,expectedhref,"true");
         soft.assertAll();
@@ -38,9 +37,8 @@ public class D06_homeSlidersStepDef {
     }
     @Then("User order number of nokia lamia")
     public void userOrderNumberOfIPhone() {
-        home.GoToUrl();
         String expectedUrl = "https://demo.nopcommerce.com/nokia-lumia-1020";
-        String actualUrl = Hooks.driver.getCurrentUrl();
+        String actualUrl =home.GoToUrl();
         soft.assertEquals(actualUrl, expectedUrl, "URL mismatch! Expected " + expectedUrl + " but was " + actualUrl);
         soft.assertAll();
     }
