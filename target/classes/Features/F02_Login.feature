@@ -4,7 +4,7 @@ Feature: F02 | users could Login with his accounts
     Given user go to Login page
 
   Scenario: Guest could register with valid data successfully
-    When user enters Email Address "test@example.com"
+    When user enters Email Address "test@gmail.com"
     And  User Clicks Password "123456"
     And  User Clicks on Login Button
     Then User Log in his account successfully
